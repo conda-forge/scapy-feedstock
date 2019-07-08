@@ -10,7 +10,7 @@ source:
   sha256: "193da281a73d368b9f4b9b6b712bd3fee7ee40e07d69dfbe2763ecd409a064e6"
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - scapy = scapy.main:interact
