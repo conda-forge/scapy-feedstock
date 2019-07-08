@@ -9,6 +9,7 @@ Feedstock license: BSD 3-Clause
 
 Summary: Scapy: interactive packet manipulation tool
 
+Scapy is a powerful Python-based interactive packet manipulation program and library.
 
 
 Current build status
