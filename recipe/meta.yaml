@@ -58,6 +58,8 @@ about:
   license_family: "GPL2"
   license_file: "LICENSE"
   summary: "Scapy: interactive packet manipulation tool"
+  description: |
+    Scapy is a powerful Python-based interactive packet manipulation program and library.
   doc_url: "https://scapy.readthedocs.io"
   dev_url: "https://github.com/secdev/scapy"
 
