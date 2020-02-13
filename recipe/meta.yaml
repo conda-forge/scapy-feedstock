@@ -10,7 +10,7 @@ source:
   sha256: "e2f8d11f6a941c14a789ae8b236b27bd634681f1b29b5e893861e284d234f6b0"
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - scapy = scapy.main:interact
@@ -25,7 +25,7 @@ requirements:
     - python
     - ipython
     - cryptography
-    - matplotlib
+    - matplotlib-base
 
 test:
   imports:
