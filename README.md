@@ -5,7 +5,7 @@ Home: https://scapy.net
 
 Package license: GNU General Public v2 (GPLv2)
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Scapy: interactive packet manipulation tool
 
