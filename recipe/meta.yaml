@@ -1,21 +1,21 @@
 {% set name = "scapy" %}
-{% set version = "2.4.3" %}
+{% set version = "2.4.4" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: "e2f8d11f6a941c14a789ae8b236b27bd634681f1b29b5e893861e284d234f6b0"
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: ecfd7a14cd9c3ef0eb08d28d5bb71d97219edff1454ccbdff229f676b27900ee
 
 build:
-  number: 1
+  number: 0
   noarch: python
   entry_points:
     - scapy = scapy.main:interact
     - UTscapy = scapy.tools.UTscapy:main
-  script: "{{ PYTHON }} -m pip install . --ignore-installed -vv "
+  script: '{{ PYTHON }} -m pip install . --ignore-installed -vv '
 
 requirements:
   host:
@@ -53,15 +53,15 @@ test:
     - UTscapy -h
 
 about:
-  home: "https://scapy.net"
-  license: "GNU General Public v2 (GPLv2)"
-  license_family: "GPL2"
-  license_file: "LICENSE"
-  summary: "Scapy: interactive packet manipulation tool"
+  home: https://scapy.net
+  license: GNU General Public v2 (GPLv2)
+  license_family: GPL2
+  license_file: LICENSE
+  summary: 'Scapy: interactive packet manipulation tool'
   description: |
     Scapy is a powerful Python-based interactive packet manipulation program and library.
-  doc_url: "https://scapy.readthedocs.io"
-  dev_url: "https://github.com/secdev/scapy"
+  doc_url: https://scapy.readthedocs.io
+  dev_url: https://github.com/secdev/scapy
 
 extra:
   recipe-maintainers:
