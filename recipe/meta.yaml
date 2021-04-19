@@ -1,5 +1,5 @@
 {% set name = "scapy" %}
-{% set version = "2.4.4" %}
+{% set version = "2.4.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: ecfd7a14cd9c3ef0eb08d28d5bb71d97219edff1454ccbdff229f676b27900ee
+  sha256: bc707e3604784496b6665a9e5b2a69c36cc9fb032af4864b29051531b24c8593
 
 build:
   number: 0
@@ -20,9 +20,9 @@ build:
 requirements:
   host:
     - pip
-    - python
+    - python >=2.7
   run:
-    - python
+    - python >=2.7
     - ipython
     - cryptography
     - matplotlib-base
@@ -54,7 +54,7 @@ test:
 
 about:
   home: https://scapy.net
-  license: GNU General Public v2 (GPLv2)
+  license: GPL-2.0-only
   license_family: GPL2
   license_file: LICENSE
   summary: 'Scapy: interactive packet manipulation tool'
