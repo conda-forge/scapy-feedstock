@@ -1,5 +1,5 @@
 {% set name = "scapy" %}
-{% set version = "2.4.5" %}
+{% set version = "2.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: bc707e3604784496b6665a9e5b2a69c36cc9fb032af4864b29051531b24c8593
+  sha256: 5b260c2b754fd8d409ba83ee7aee294ecdbb2c235f9f78fe90bc11cb6e5debc2
 
 build:
   number: 0
