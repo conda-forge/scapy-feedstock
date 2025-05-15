@@ -1,5 +1,5 @@
 {% set name = "scapy" %}
-{% set version = "2.4.3rc2" %}
+{% set version = "2.6.1" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,15 +7,15 @@ package:
 
 source:
   url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: "193da281a73d368b9f4b9b6b712bd3fee7ee40e07d69dfbe2763ecd409a064e6"
+  sha256: "7600d7e2383c853e5c3a6e05d37e17643beebf2b3e10d7914dffcc3bc3c6e6c5"
 
 build:
-  number: 1
+  number: 0
   noarch: python
   entry_points:
     - scapy = scapy.main:interact
     - UTscapy = scapy.tools.UTscapy:main
-  script: "{{ PYTHON }} -m pip install . --ignore-installed -vv "
+  script: "python -m pip install . --no-deps --no-build-isolation -vv"
 
 requirements:
   host:
@@ -26,6 +26,8 @@ requirements:
     - ipython
     - cryptography
     - matplotlib
+run_constrained:
+  - cryptography >=2.0
 
 test:
   imports:
